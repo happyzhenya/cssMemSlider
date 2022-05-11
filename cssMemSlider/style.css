@@ -21,26 +21,20 @@ main{
 }
 
 .css_mem_slider{
-
+    height: 90vh;
+    width: 90vw;
 }
 .css_mem_content{
+    width: inherit;
+    height: inherit;
 
 }
 
-.css_mem_pictures{
-
-}
-
-.css_mem_pictures_container{
-
-}
 .pictures{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 
 }
 
-.container{
-
-}
-
-.label_container{
-}
