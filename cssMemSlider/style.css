@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:aliceblue;
+    font-size: 1.5rem;
+}
+
+body{
+    background: black;
+}
+
+main{
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.css_mem_slider{
+
+}
+.css_mem_content{
+
+}
+
+.css_mem_pictures{
+
+}
+
+.css_mem_pictures_container{
+
+}
+.pictures{
+
+}
+
+.container{
+
+}
+
+.label_container{
+}
