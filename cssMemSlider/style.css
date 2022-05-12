@@ -21,13 +21,13 @@
 }
 
 body{
-   
+    
     font-family: 'Cutive';
     background: black;
 }
 
 main{
-    width: 90vw;
+    width: 70vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@ main{
 
 .css_mem_slider{
     height: 90%;
-    width: 90vw;
+    width: 70vw;
     margin: 1% auto 0;
 }
 .css_mem_content{
@@ -52,10 +52,10 @@ input{
 }
 
 .css_mem_pictures{
-    margin-top: 5%;
+    margin-top: 2%;
     height: 100%;
-    width: 100%;
     max-width: 100%;
+    width: 100%;
     overflow: hidden;
     border-radius: 2%;
 }
@@ -69,6 +69,7 @@ input{
     display: inline-block;
     height: 100%;
     min-width: 100%;
+    
 }
 
 .container{
@@ -94,7 +95,7 @@ input{
 }
 
 .names_text{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
    
 }
 
@@ -109,7 +110,7 @@ input{
   align-items: center;  
 }
 
-.label_1, .label_2, .label_3, .label_4, .label_5{
+.labels > label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,16 +118,18 @@ input{
     width: 2rem;
     height: 2rem;
     user-select: none;
+   
   
 
 }
 
-.label_span{
+.labels > label > span {
     display: inline-block;
-    background: aliceblue;
+    background: blueviolet;
     border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all .3s linear;
 
 }
 
@@ -135,6 +138,59 @@ input{
 #slide_3:checked ~ .css_mem_content .label_3 span,
 #slide_4:checked ~ .css_mem_content .label_4 span,
 #slide_5:checked ~ .css_mem_content .label_5 span{
-    transform: scale(1);
-    background-color: blueviolet;
+    transform: scale(0.9);
+    background-color: black;
+    border: solid 0.2rem blueviolet;
+}
+
+#slide_1:checked ~ .css_mem_content .css_mem_pictures_container{
+    transform: translateX(0);
+}
+
+#slide_2:checked ~ .css_mem_content .css_mem_pictures_container{
+    transform: translateX(-100%);
+}
+
+#slide_3:checked ~ .css_mem_content .css_mem_pictures_container{
+    transform: translateX(-200%);
+}
+
+#slide_4:checked ~ .css_mem_content .css_mem_pictures_container{
+    transform: translateX(-300%);
+}
+
+#slide_5:checked ~ .css_mem_content .css_mem_pictures_container{
+    transform: translateX(-400%);
+}
+
+#slide_1:checked ~ .css_mem_content .css_mem_names_container{
+    transform: translateX(0);
+}
+
+#slide_2:checked ~ .css_mem_content .css_mem_names_container{
+    transform: translateX(100%);
+}
+
+#slide_3:checked ~ .css_mem_content .css_mem_names_container{
+    transform: translateX(200%);
+}
+
+#slide_4:checked ~ .css_mem_content .css_mem_names_container{
+    transform: translateX(300%);
+}
+
+#slide_5:checked ~ .css_mem_content .css_mem_names_container{
+    transform: translateX(400%);
+}
+
+@media (hover: hover){
+    label:hover  span{
+        background: rgb(181, 140, 222);
+
+    }
+    label:active span{
+        background: black;
+       
+
+    }
 }
