@@ -73,6 +73,7 @@ input{
 }
 
 .container{
+    margin-top: 2%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -86,7 +87,7 @@ input{
 .css_mem_names_container{
     display: flex;
     flex-direction: row-reverse;
-    transition: all .3s linear;
+    transition: all .5s linear;
 }
 
 .names{
@@ -100,7 +101,7 @@ input{
 }
 
 .label_container{
-    margin-top: 1%;
+   margin-top: 1%;
     flex: 0.5;
 }
 
@@ -129,7 +130,7 @@ input{
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
-    transition: all .3s linear;
+    transition: all .5s linear;
 
 }
 
@@ -183,14 +184,36 @@ input{
     transform: translateX(400%);
 }
 
+
+@keyframes my {
+    0% {
+        transform: translate(100%, -50%);
+    }
+     3% {
+        transform: translate(100%, -50%);
+    }
+    6% {
+        transform: translate(0, -50%);
+    }
+     30% {
+        transform: translate(0, -50%);
+    }
+      33% {
+        transform: translate(-100%, -50%);
+    }
+   100% {
+        transform: translate(-100%, -50%);
+    }
+}
+
 @media (hover: hover){
     label:hover  span{
-        background: rgb(181, 140, 222);
+        background: white;
 
     }
     label:active span{
         background: black;
-       
+        box-shadow: 0 0 1rem 0.4rem white;
 
     }
 }
