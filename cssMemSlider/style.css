@@ -30,11 +30,52 @@ main{
 
 }
 
-.pictures{
+.css_mem_pictures{
+    
     height: 100%;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
 
+
 }
+
+.css_mem_pictures_container{
+    display: flex;
+    transition: all .3s linear;
+}
+
+.picture{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.css_mem_names{
+    overflow: hidden;
+}
+.css_mem_names_container{
+    display: flex;
+    flex-direction: row;
+    transition: all .3s linear;
+}
+
+.names{
+    width: 100%;
+
+}
+
+.names_text{
+    font-size: 1.5rem;
+}
+
+
+
 
