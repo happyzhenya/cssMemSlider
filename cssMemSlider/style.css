@@ -1,17 +1,33 @@
+/* cutive-regular - latin */
+@font-face {
+    font-family: 'Cutive';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/cutive-v17-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../cssMemSlider/assets/fonts/cutive-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../cssMemSlider/assets/fonts/cutive-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../cssMemSlider/assets/fonts/cutive-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../cssMemSlider/assets/fonts/cutive-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../cssMemSlider/assets/fonts/cutive-v17-latin-regular.svg#Cutive') format('svg'); /* Legacy iOS */
+  }
+  
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color:aliceblue;
-    font-size: 1.5rem;
 }
 
 body{
+   
+    font-family: 'Cutive';
     background: black;
 }
 
 main{
-    width: 65%;
+    width: 90vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,8 +37,9 @@ main{
 }
 
 .css_mem_slider{
-    height: 90vh;
+    height: 90%;
     width: 90vw;
+    margin: 1% auto 0;
 }
 .css_mem_content{
     width: inherit;
@@ -30,14 +47,17 @@ main{
 
 }
 
+input{
+    display: none;
+}
+
 .css_mem_pictures{
-    
+    margin-top: 5%;
     height: 100%;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-
-
+    border-radius: 2%;
 }
 
 .css_mem_pictures_container{
@@ -48,34 +68,73 @@ main{
 .picture{
     display: inline-block;
     height: 100%;
-    width: 100%;
+    min-width: 100%;
 }
 
 .container{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
 }
 
 .css_mem_names{
     overflow: hidden;
+    flex: 2.5;
 }
 .css_mem_names_container{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     transition: all .3s linear;
 }
 
 .names{
-    width: 100%;
-
+    min-width: 100%;
+    margin-top: 3%;
 }
 
 .names_text{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+   
 }
 
+.label_container{
+    margin-top: 1%;
+    flex: 0.5;
+}
 
+.labels{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;  
+}
 
+.label_1, .label_2, .label_3, .label_4, .label_5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    user-select: none;
+  
 
+}
+
+.label_span{
+    display: inline-block;
+    background: aliceblue;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+
+}
+
+#slide_1:checked ~ .css_mem_content .label_1 span,
+#slide_2:checked ~ .css_mem_content .label_2 span,
+#slide_3:checked ~ .css_mem_content .label_3 span,
+#slide_4:checked ~ .css_mem_content .label_4 span,
+#slide_5:checked ~ .css_mem_content .label_5 span{
+    transform: scale(1);
+    background-color: blueviolet;
+}
