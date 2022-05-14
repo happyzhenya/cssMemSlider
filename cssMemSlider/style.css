@@ -62,7 +62,7 @@ input{
 
 .css_mem_pictures_container{
     display: flex;
-    transition: all .3s linear;
+    transition: all .5s ease-in-out;
    
     
 }
