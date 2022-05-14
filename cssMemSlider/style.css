@@ -63,6 +63,8 @@ input{
 .css_mem_pictures_container{
     display: flex;
     transition: all .3s linear;
+   
+    
 }
 
 .picture{
@@ -94,7 +96,7 @@ input{
 .names{
     margin-top: 4%;
     min-width: 100%;
-    
+    animation-name:  animate_fading 2s infinite ;
 }
 
 .names_text{
@@ -189,26 +191,34 @@ input{
 }
 
 
-@keyframes my {
-    0% {
-        transform: translate(100%, -50%);
+@keyframes slidy {
+    20% { margin-left:    0%; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+    100% { margin-left: -400%; }
     }
-     3% {
-        transform: translate(100%, -50%);
+
+    @keyframes animate_fading {
+        0% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0.6;
+        }
+        50% {
+            opacity: 0.1;
+        }
+        75% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    6% {
-        transform: translate(0, -50%);
-    }
-     30% {
-        transform: translate(0, -50%);
-    }
-      33% {
-        transform: translate(-100%, -50%);
-    }
-   100% {
-        transform: translate(-100%, -50%);
-    }
-}
 
 @media (hover: hover){
     label:hover  span{
